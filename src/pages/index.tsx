@@ -130,7 +130,19 @@ function Projects() {
 }
 
 function Contact() {
-  return <div className="text-white">Contact</div>;
+  return (
+    <div className="flex h-full flex-row gap-20 py-20">
+      <h2 className="pl-20 text-[55px] font-bold text-[#31C58F]">CONTACT</h2>
+      <div className="flex flex-col gap-10 text-white">
+        <div>icon</div>
+        <div>icon</div>
+        <div>icon</div>
+      </div>
+      <div>
+        <img src="/contactimg.png" alt="contactimg.png" />
+      </div>
+    </div>
+  );
 }
 
 export default function Home() {
