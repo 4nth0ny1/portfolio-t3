@@ -76,7 +76,29 @@ function About() {
 }
 
 function AboutTwo() {
-  return <div className="text-black">About Two</div>;
+  return (
+    <div className="h-full">
+      <div className="flex h-1/2 flex-col justify-center indent-20">
+        <h2 className="w-2/3 text-[72px] font-thin">I EMBRACE MANY</h2>
+        <h2 className="w-2/3 text-[72px] font-thin">PERSPECTIVES ON</h2>
+        <h2 className="w-2/3 text-[72px] font-thin">DESIGN & DEVELOPMENT</h2>
+      </div>
+      <div className="flex h-1/2 flex-col justify-center">
+        <div className="flex flex-row justify-center gap-40">
+          <div className="flex flex-col justify-center text-[34px]">
+            <p className="italic">Here are</p>
+            <p className="italic">some of my</p>
+            <span className="text-[#31C58F]">favorites</span>
+          </div>
+          <ul className="text-[55px] text-white">
+            <li className="font-bold">Minimalism</li>
+            <li>Functionality</li>
+            <li className="font-thin">Aesthetics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function Projects() {
@@ -104,7 +126,7 @@ export default function Home() {
       <div className="h-screen bg-gradient-to-b from-[#252525] to-[#FFF]">
         <About />
       </div>
-      <div className="min-h-screen bg-gradient-to-b from-[#FFF] to-[#252525]">
+      <div className="h-screen bg-gradient-to-b from-[#FFF] to-[#252525]">
         <AboutTwo />
       </div>
 
