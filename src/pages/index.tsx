@@ -16,7 +16,7 @@ function Navbar() {
 
 function Hero() {
   return (
-    <>
+    <div className="px-20">
       <img
         src="/heroimg.png"
         alt="heroimg.png"
@@ -25,7 +25,7 @@ function Hero() {
       <h2 className="absolute bottom-0 w-[40%] pb-8 pl-4 text-[64px] text-white">
         A PORTFOLIO BUILT WITH <span className="text-[#31C58F]">REACT</span>JS
       </h2>
-    </>
+    </div>
   );
 }
 
@@ -33,8 +33,8 @@ function About() {
   return (
     <div className="h-full">
       <div className="flex h-1/2 flex-row items-center justify-between px-6 text-white">
-        <h2 className="text-[55px] font-bold text-[#31C58F]">ABOUT</h2>
-        <div className="text-[72px]">
+        <h2 className="pl-20 text-[55px] font-bold text-[#31C58F]">ABOUT</h2>
+        <div className="pr-20 text-[72px]">
           <h2 className="font-bold">HELLO EVERYBODY!</h2>
           <h2 className=" indent-28 font-thin">
             MY NAME IS <span className="text-[#31C58F]">ANTHONY</span>
@@ -77,7 +77,7 @@ function About() {
 
 function AboutTwo() {
   return (
-    <div className="h-full">
+    <div className="h-full px-20">
       <div className="flex h-1/2 flex-col justify-center indent-20">
         <h2 className="w-2/3 text-[72px] font-thin">I EMBRACE MANY</h2>
         <h2 className="w-2/3 text-[72px] font-thin">PERSPECTIVES ON</h2>
