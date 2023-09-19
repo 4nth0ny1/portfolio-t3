@@ -102,7 +102,31 @@ function AboutTwo() {
 }
 
 function Projects() {
-  return <div className="text-white">Projects</div>;
+  return (
+    <div className="flex h-full flex-row py-20">
+      <h2 className="w-1/2 pl-20 text-[55px] font-bold text-[#31C58F]">
+        PROJECTS
+      </h2>
+      <div className="flex w-1/2 flex-row flex-wrap">
+        <div className="h-1/2 w-1/2 border-2 border-white p-4">
+          <h2 className="text-[28px] text-white">FUSION92</h2>
+          <img src="" alt="fusion92.png" />
+        </div>
+        <div className="h-1/2 w-1/2 border-2 border-white p-4">
+          <h2 className="text-[28px] text-white">MANAGE-IT</h2>
+          <img src="" alt="fusion92.png" />
+        </div>
+        <div className="h-1/2 w-1/2 border-2 border-white p-4">
+          <h2 className="text-[28px] text-white">REDDIT-CLONE</h2>
+          <img src="" alt="fusion92.png" />
+        </div>
+        <div className="h-1/2 w-1/2 border-2 border-white p-4">
+          <h2 className="text-[28px] text-white">RAILS CRM</h2>
+          <img src="" alt="fusion92.png" />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function Contact() {
@@ -130,7 +154,7 @@ export default function Home() {
         <AboutTwo />
       </div>
 
-      <div className="min-h-screen bg-[#252525] p-6">
+      <div className="h-screen bg-[#252525] p-6">
         <Projects />
       </div>
       <div className="min-h-screen bg-gradient-to-b from-[#252525] to-[#000] p-6">
