@@ -30,7 +30,49 @@ function Hero() {
 }
 
 function About() {
-  return <div className="text-black">About</div>;
+  return (
+    <div className="h-full">
+      <div className="flex h-1/2 flex-row items-center justify-between px-6 text-white">
+        <h2 className="text-[55px] font-bold text-[#31C58F]">ABOUT</h2>
+        <div className="text-[72px]">
+          <h2 className="font-bold">HELLO EVERYBODY!</h2>
+          <h2 className=" indent-28 font-thin">
+            MY NAME IS <span className="text-[#31C58F]">ANTHONY</span>
+          </h2>
+        </div>
+      </div>
+      <div className="flex h-1/2 flex-row">
+        <div className="flex h-full w-1/2 flex-row border-2 border-black px-32 py-8">
+          <div className="flex w-1/2 flex-col justify-between">
+            <h2 className="text-[32px] font-bold">DESIGNER</h2>
+            <ul className="text-[24px]">
+              <li>FIGMA</li>
+              <li>TAILWIND</li>
+              <li>CSS</li>
+              <li>MATERIAL UI</li>
+            </ul>
+          </div>
+          <div className="flex w-1/2 flex-col justify-center">
+            <img src="/designimg.png" alt="designimg.png" className="" />
+          </div>
+        </div>
+        <div className="flex h-full w-1/2 flex-row border-2 border-black px-32 py-8">
+          <div className="flex w-1/2 flex-col justify-between">
+            <h2 className="text-[32px] font-bold">FULL-STACK DEVELOPER</h2>
+            <ul className="text-[24px]">
+              <li>FIGMA</li>
+              <li>TAILWIND</li>
+              <li>CSS</li>
+              <li>MATERIAL UI</li>
+            </ul>
+          </div>
+          <div className="flex w-1/2 flex-col justify-center">
+            <img src="/fullstackimg.png" alt="fullstackimg.png" className="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function AboutTwo() {
@@ -59,10 +101,10 @@ export default function Home() {
         <Hero />
       </div>
 
-      <div className="min-h-screen bg-gradient-to-b from-[#252525] to-[#FFF] p-6">
+      <div className="h-screen bg-gradient-to-b from-[#252525] to-[#FFF]">
         <About />
       </div>
-      <div className="min-h-screen bg-gradient-to-b from-[#FFF] to-[#252525] p-6">
+      <div className="min-h-screen bg-gradient-to-b from-[#FFF] to-[#252525]">
         <AboutTwo />
       </div>
 
