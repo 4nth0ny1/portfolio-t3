@@ -43,7 +43,7 @@ function About() {
     setOpen(!open);
     setDesignData([
       {
-        title: "im a designer",
+        title: "Designer",
         subtitle: "The heart in digital form.",
         description:
           "My philosophy is to expose myself to as many kinds of expression possible. Only then can I expand my potential and create designs that are truly effective.",
@@ -85,10 +85,10 @@ function About() {
                   </button>
                 </div>
 
-                <div>
-                  <h2>{d.title}</h2>
-                  <p>{d.subtitle}</p>
-                  <p>{d.description}</p>
+                <div className="flex flex-col gap-4 py-4 pl-2">
+                  <h2 className="text-5xl">{d.title}</h2>
+                  <p className="text-2xl italic">{d.subtitle}</p>
+                  <p className="w-1/2 text-xl">{d.description}</p>
                 </div>
               </div>
             ))}
@@ -100,7 +100,7 @@ function About() {
                     <h2 className="whitespace-nowrap text-5xl tracking-widest">
                       Full-Stack
                     </h2>
-                    <p>{d.subtitle}</p>
+                    <p className="text-2xl italic">{d.subtitle}</p>
                     <p className="w-1/2 text-xl">{d.description}</p>
                   </div>
                   <div className="relative h-full w-4/5 bg-black">
