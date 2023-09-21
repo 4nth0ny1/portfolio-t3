@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useState } from "react";
 
 function Navbar() {
   return (
@@ -29,49 +30,151 @@ function Hero() {
   );
 }
 
+interface ModalProps {
+  title: string;
+}
+
 function About() {
+  const [open, setOpen] = useState(false);
+  const [designData, setDesignData] = useState<ModalProps | any>(null);
+  const [developerData, setDeveloperData] = useState<ModalProps | any>([]);
+
+  const handleDesignClick = () => {
+    setOpen(!open);
+    setDesignData([
+      {
+        title: "im a designer",
+        subtitle: "The heart in digital form.",
+        description:
+          "My philosophy is to expose myself to as many kinds of expression possible. Only then can I expand my potential and create designs that are truly effective.",
+      },
+    ]);
+  };
+
+  const handleDeveloperClick = () => {
+    setOpen(!open);
+    setDeveloperData([
+      {
+        title: "Full-Stack Developer",
+        subtitle: "The heart in digital form.",
+        description:
+          "My philosophy is to expose myself to as many kinds of expression possible. Only then can I expand my potential and create designs that are truly effective.",
+      },
+    ]);
+  };
+
+  const handleCloseModal = () => {
+    setOpen(!open);
+    setDesignData(null);
+    setDeveloperData([]);
+  };
+
   return (
-    <div className="h-full">
-      <div className="flex h-1/2 flex-row items-center justify-between px-6 text-white">
-        <h2 className="pl-20 text-[55px] font-bold text-[#31C58F]">ABOUT</h2>
-        <div className="pr-20 text-[72px]">
-          <h2 className="font-bold">HELLO EVERYBODY!</h2>
-          <h2 className=" indent-28 font-thin">
-            MY NAME IS <span className="text-[#31C58F]">ANTHONY</span>
-          </h2>
+    <>
+      {open ? (
+        <div className="flex h-full flex-row items-center justify-center">
+          {designData &&
+            designData.map((d) => (
+              <div className="h-4/5 w-4/5 bg-[url('/misty.png')] bg-cover bg-center bg-no-repeat">
+                <div className="flex flex-row justify-end">
+                  <button
+                    onClick={handleCloseModal}
+                    className="px-8 py-4 text-3xl"
+                  >
+                    x
+                  </button>
+                </div>
+
+                <div>
+                  <h2>{d.title}</h2>
+                  <p>{d.subtitle}</p>
+                  <p>{d.description}</p>
+                </div>
+              </div>
+            ))}
+          {developerData &&
+            developerData.map((d) => (
+              <div className="h-4/5 w-4/5 bg-white">
+                <div className="flex h-full w-full flex-row">
+                  <div className="flex w-1/5 flex-col gap-4 py-4 pl-2">
+                    <h2 className="whitespace-nowrap text-5xl tracking-widest">
+                      Full-Stack
+                    </h2>
+                    <p>{d.subtitle}</p>
+                    <p className="w-1/2 text-xl">{d.description}</p>
+                  </div>
+                  <div className="relative h-full w-4/5 bg-black">
+                    <div className="h-full w-full bg-[url('/paint.png')] bg-cover bg-center bg-no-repeat"></div>
+                    <span className="absolute left-0 top-0 px-4 py-4 text-5xl text-white">
+                      Developer
+                    </span>
+                    <button
+                      onClick={handleCloseModal}
+                      className="absolute right-0 top-0 px-8 py-4 text-3xl text-white"
+                    >
+                      x
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
         </div>
-      </div>
-      <div className="flex h-1/2 flex-row">
-        <div className="flex h-full w-1/2 flex-row border-2 border-black px-32 py-8">
-          <div className="flex w-1/2 flex-col justify-between">
-            <h2 className="text-[32px] font-bold">DESIGNER</h2>
-            <ul className="text-[24px]">
-              <li>FIGMA</li>
-              <li>TAILWIND</li>
-              <li>CSS</li>
-              <li>MATERIAL UI</li>
-            </ul>
+      ) : (
+        <div className="h-full">
+          <div className="flex h-1/2 flex-row items-center justify-between px-6 text-white">
+            <h2 className="pl-20 text-[55px] font-bold text-[#31C58F]">
+              ABOUT
+            </h2>
+            <div className="pr-20 text-[72px]">
+              <h2 className="font-bold">HELLO EVERYBODY!</h2>
+              <h2 className=" indent-28 font-thin">
+                MY NAME IS <span className="text-[#31C58F]">ANTHONY</span>
+              </h2>
+            </div>
           </div>
-          <div className="flex w-1/2 flex-col justify-center">
-            <img src="/designimg.png" alt="designimg.png" className="" />
+          <div className="flex h-1/2 flex-row">
+            <div
+              onClick={handleDesignClick}
+              className="flex h-full w-1/2 flex-row border-2 border-black px-32 py-8"
+            >
+              <div className="flex w-1/2 flex-col justify-between">
+                <h2 className="text-[32px] font-bold">DESIGNER</h2>
+                <ul className="text-[24px]">
+                  <li>FIGMA</li>
+                  <li>TAILWIND</li>
+                  <li>CSS</li>
+                  <li>MATERIAL UI</li>
+                </ul>
+              </div>
+              <div className="flex w-1/2 flex-col justify-center">
+                <img src="/designimg.png" alt="designimg.png" className="" />
+              </div>
+            </div>
+            <div
+              onClick={handleDeveloperClick}
+              className="flex h-full w-1/2 flex-row border-2 border-black px-32 py-8"
+            >
+              <div className="flex w-1/2 flex-col justify-between">
+                <h2 className="text-[32px] font-bold">FULL-STACK DEVELOPER</h2>
+                <ul className="text-[24px]">
+                  <li>FIGMA</li>
+                  <li>TAILWIND</li>
+                  <li>CSS</li>
+                  <li>MATERIAL UI</li>
+                </ul>
+              </div>
+              <div className="flex w-1/2 flex-col justify-center">
+                <img
+                  src="/fullstackimg.png"
+                  alt="fullstackimg.png"
+                  className=""
+                />
+              </div>
+            </div>
           </div>
         </div>
-        <div className="flex h-full w-1/2 flex-row border-2 border-black px-32 py-8">
-          <div className="flex w-1/2 flex-col justify-between">
-            <h2 className="text-[32px] font-bold">FULL-STACK DEVELOPER</h2>
-            <ul className="text-[24px]">
-              <li>FIGMA</li>
-              <li>TAILWIND</li>
-              <li>CSS</li>
-              <li>MATERIAL UI</li>
-            </ul>
-          </div>
-          <div className="flex w-1/2 flex-col justify-center">
-            <img src="/fullstackimg.png" alt="fullstackimg.png" className="" />
-          </div>
-        </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 }
 
