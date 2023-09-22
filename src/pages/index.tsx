@@ -289,10 +289,10 @@ export default function Home() {
         <AboutTwo />
       </div>
 
-      <div className="h-screen bg-[#252525] p-6">
+      <div className="h-screen bg-gradient-to-b from-[#252525] to-[#252525] p-6">
         <Projects />
       </div>
-      <div className="min-h-screen bg-gradient-to-b from-[#252525] to-[#000] p-6">
+      <div className="min-h-screen bg-gradient-to-b from-[#252525] to-[#000] p-6 pt-44">
         <Contact />
       </div>
     </>
