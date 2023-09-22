@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function Navbar() {
   return (
-    <div className="flex h-16 flex-row items-center justify-between border-b border-white bg-black px-24 text-white">
+    <div className="flex h-16 flex-row items-center justify-between border-b border-white bg-black text-white">
       <h2>logo</h2>
       <ul className="flex flex-row justify-between gap-6">
         <li>home</li>
@@ -257,7 +257,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
+      <div className="bg-black px-44">
+        <Navbar />
+      </div>
       <div className="h-[calc(100vh-64px)] bg-gradient-to-b from-[#000] to-[#252525] px-24 py-8">
         <Hero />
       </div>
