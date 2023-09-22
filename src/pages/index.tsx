@@ -121,16 +121,10 @@ function About() {
         </div>
       ) : (
         <div className="h-full">
-          <div className="flex h-1/2 flex-row items-center justify-between px-6 text-white">
+          <div className="flex h-1/2 flex-row items-center px-6 text-white">
             <h2 className="pl-20 text-[55px] font-bold text-[#31C58F]">
               ABOUT
             </h2>
-            <div className="pr-20 text-[72px]">
-              <h2 className="font-bold">HELLO EVERYBODY!</h2>
-              <h2 className=" indent-28 font-thin">
-                MY NAME IS <span className="text-[#31C58F]">ANTHONY</span>
-              </h2>
-            </div>
           </div>
           <div className="flex h-1/2 flex-row">
             <div
