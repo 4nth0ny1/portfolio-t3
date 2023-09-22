@@ -184,7 +184,7 @@ function AboutTwo() {
         <h2 className="w-2/3 text-[72px] font-thin">DESIGN & DEVELOPMENT</h2>
       </div>
       <div className="flex h-1/2 flex-col justify-center">
-        <div className="flex flex-row justify-center gap-40">
+        <div className="flex flex-row justify-end gap-40 pr-40">
           <div className="flex flex-col justify-center text-[34px]">
             <p className="italic">Here are</p>
             <p className="italic">some of my</p>
@@ -284,7 +284,8 @@ export default function Home() {
       <div className="h-screen bg-gradient-to-b from-[#252525] to-[#FFF]">
         <About />
       </div>
-      <div className="h-screen bg-gradient-to-b from-[#FFF] to-[#252525]">
+
+      <div className="mt-40 h-screen bg-gradient-to-b from-[#FFF] to-[#252525] pb-20">
         <AboutTwo />
       </div>
 
