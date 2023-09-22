@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useState } from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiGithub } from "react-icons/fi";
+import Link from "next/link";
 
 function Navbar() {
   return (
@@ -249,9 +250,13 @@ function Contact() {
     <div className="flex h-full flex-row gap-20 py-20">
       <h2 className="pl-20 text-[55px] font-bold text-[#31C58F]">CONTACT</h2>
       <div className="flex flex-col gap-10 text-white">
-        <HiOutlineMail className="text-3xl" />
+        <Link href="mailto:acatullo4@gmail.com">
+          <HiOutlineMail className="text-3xl" />
+        </Link>
 
-        <FiGithub className="text-3xl" />
+        <Link href="https://github.com/4nth0ny1">
+          <FiGithub className="text-3xl" />
+        </Link>
       </div>
       <div>
         <img src="/contactimg.png" alt="contactimg.png" />
