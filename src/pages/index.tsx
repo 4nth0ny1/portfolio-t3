@@ -213,19 +213,35 @@ function Projects() {
       <div className="flex w-1/2 flex-row flex-wrap">
         <div className="h-1/2 w-1/2 border-2 border-white p-4">
           <h2 className="text-[28px] text-white">FUSION92</h2>
-          <img src="" alt="fusion92.png" />
+          <img
+            src="/nyl.jpg"
+            alt="nyl.jpg"
+            className="h-[calc(100%-40px)] w-full"
+          />
         </div>
         <div className="h-1/2 w-1/2 border-2 border-white p-4">
           <h2 className="text-[28px] text-white">MANAGE-IT</h2>
-          <img src="" alt="fusion92.png" />
+          <img
+            src="/manage.jpg"
+            alt="manage.jpg"
+            className="h-[calc(100%-40px)] w-full"
+          />
         </div>
         <div className="h-1/2 w-1/2 border-2 border-white p-4">
           <h2 className="text-[28px] text-white">REDDIT-CLONE</h2>
-          <img src="" alt="fusion92.png" />
+          <img
+            src="/social.jpg"
+            alt="social.jpg"
+            className="h-[calc(100%-40px)] w-full"
+          />
         </div>
         <div className="h-1/2 w-1/2 border-2 border-white p-4">
           <h2 className="text-[28px] text-white">RAILS CRM</h2>
-          <img src="" alt="fusion92.png" />
+          <img
+            src="crm.jpg"
+            alt="crm.jpg"
+            className="h-[calc(100%-40px)] w-full"
+          />
         </div>
       </div>
     </div>
