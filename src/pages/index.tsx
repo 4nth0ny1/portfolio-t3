@@ -212,7 +212,7 @@ function AboutTwo() {
             <motion.li
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ ease: "easeOut", duration: 1 }}
+              transition={{ type: "spring", ease: "easeOut", duration: 1 }}
               className="font-bold"
             >
               Minimalism
@@ -220,7 +220,7 @@ function AboutTwo() {
             <motion.li
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ ease: "easeOut", duration: 1.5 }}
+              transition={{ type: "spring", ease: "easeOut", duration: 1.5 }}
               className="font-bold"
             >
               Functionality{" "}
@@ -228,7 +228,7 @@ function AboutTwo() {
             <motion.li
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ ease: "easeOut", duration: 2 }}
+              transition={{ type: "spring", ease: "easeOut", duration: 2 }}
               className="font-thin"
             >
               Aesthetics
