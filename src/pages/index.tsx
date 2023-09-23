@@ -22,7 +22,10 @@ function Navbar() {
 function Hero() {
   return (
     <div className="px-20">
-      <img
+      <motion.img
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 5 }}
         src="/heroimg.png"
         alt="heroimg.png"
         className="relative h-full w-full"
@@ -201,11 +204,36 @@ function AboutTwo() {
             <p className="italic">some of my</p>
             <span className="text-[#31C58F]">favorites</span>
           </div>
-          <ul className="text-[55px] text-white">
-            <li className="font-bold">Minimalism</li>
-            <li>Functionality</li>
-            <li className="font-thin">Aesthetics</li>
-          </ul>
+          <motion.ul
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="text-[55px] text-white"
+          >
+            <motion.li
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 1 }}
+              className="font-bold"
+            >
+              Minimalism
+            </motion.li>
+            <motion.li
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 1.5 }}
+              className="font-bold"
+            >
+              Functionality{" "}
+            </motion.li>
+            <motion.li
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 2 }}
+              className="font-thin"
+            >
+              Aesthetics
+            </motion.li>
+          </motion.ul>
         </div>
       </div>
     </div>
