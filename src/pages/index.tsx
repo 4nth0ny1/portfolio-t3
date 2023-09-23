@@ -41,6 +41,12 @@ interface ModalProps {
   title: string;
 }
 
+interface DesDevProps {
+  title: string;
+  subtitle: string;
+  description: string;
+}
+
 function About() {
   const [open, setOpen] = useState(false);
   const [designData, setDesignData] = useState<ModalProps | any>(null);
@@ -81,7 +87,7 @@ function About() {
       {open ? (
         <div className="flex h-full flex-row items-center justify-center">
           {designData &&
-            designData.map((d: any) => (
+            designData.map((d: DesDevProps) => (
               <motion.div
                 initial={{ scale: 0.5, x: -1000, opacity: 0 }}
                 animate={{ scale: 1, x: 0, opacity: 1 }}
@@ -106,7 +112,7 @@ function About() {
               </motion.div>
             ))}
           {developerData &&
-            developerData.map((d: any) => (
+            developerData.map((d: DesDevProps) => (
               <motion.div
                 initial={{ scale: 0.5, x: 1000, opacity: 0 }}
                 animate={{ scale: 1, x: 0, opacity: 1 }}
