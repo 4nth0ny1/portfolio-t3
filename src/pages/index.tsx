@@ -23,9 +23,9 @@ function Hero() {
   return (
     <div className="px-20">
       <motion.img
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ ease: "easeOut", duration: 5 }}
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 2 }}
         src="/heroimg.png"
         alt="heroimg.png"
         className="relative h-full w-full"
@@ -83,8 +83,8 @@ function About() {
           {designData &&
             designData.map((d) => (
               <motion.div
-                initial={{ x: -1000, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
+                initial={{ scale: 0.5, x: -1000, opacity: 0 }}
+                animate={{ scale: 1, x: 0, opacity: 1 }}
                 transition={{ ease: "easeOut", duration: 0.5 }}
                 className="h-4/5 w-4/5 bg-[url('/misty.png')] bg-cover bg-center bg-no-repeat"
               >
@@ -107,8 +107,8 @@ function About() {
           {developerData &&
             developerData.map((d) => (
               <motion.div
-                initial={{ x: 1000, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
+                initial={{ scale: 0.5, x: 1000, opacity: 0 }}
+                animate={{ scale: 1, x: 0, opacity: 1 }}
                 transition={{ ease: "easeOut", duration: 0.5 }}
                 className="h-4/5 w-4/5 bg-white"
               >
