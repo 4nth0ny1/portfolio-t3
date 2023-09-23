@@ -298,11 +298,11 @@ function Contact() {
           className="absolute bottom-1/2 flex w-full justify-center gap-20"
         >
           <Link href="mailto:acatullo4@gmail.com">
-            <HiOutlineMail className="text-5xl hover:text-[#31c58f]" />
+            <HiOutlineMail className="cursor-pointer text-5xl hover:text-[#31c58f]" />
           </Link>
 
           <Link href="https://github.com/4nth0ny1">
-            <FiGithub className="text-5xl hover:text-[#31c58f]" />
+            <FiGithub className="cursor-pointer text-5xl hover:text-[#31c58f]" />
           </Link>
         </motion.div>
       </div>
