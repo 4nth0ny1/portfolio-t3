@@ -3,6 +3,7 @@ import { useState } from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiGithub } from "react-icons/fi";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 function Navbar() {
   return (
@@ -78,7 +79,12 @@ function About() {
         <div className="flex h-full flex-row items-center justify-center">
           {designData &&
             designData.map((d) => (
-              <div className="h-4/5 w-4/5 bg-[url('/misty.png')] bg-cover bg-center bg-no-repeat">
+              <motion.div
+                initial={{ x: -1000, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ ease: "easeOut", duration: 0.5 }}
+                className="h-4/5 w-4/5 bg-[url('/misty.png')] bg-cover bg-center bg-no-repeat"
+              >
                 <div className="flex flex-row justify-end">
                   <button
                     onClick={handleCloseModal}
@@ -93,11 +99,16 @@ function About() {
                   <p className="text-2xl italic">{d.subtitle}</p>
                   <p className="w-1/2 text-xl">{d.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           {developerData &&
             developerData.map((d) => (
-              <div className="h-4/5 w-4/5 bg-white">
+              <motion.div
+                initial={{ x: 1000, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ ease: "easeOut", duration: 0.5 }}
+                className="h-4/5 w-4/5 bg-white"
+              >
                 <div className="flex h-full w-full flex-row">
                   <div className="flex w-1/5 flex-col gap-4 py-4 pl-2">
                     <h2 className="whitespace-nowrap text-5xl tracking-widest">
@@ -119,20 +130,20 @@ function About() {
                     </button>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
         </div>
       ) : (
         <div className="h-full">
-          <div className="flex h-1/2 flex-row items-center px-6 text-white">
+          <div className="flex h-1/2  flex-row items-center px-6 text-white">
             <h2 className="pl-20 text-[55px] font-bold text-[#31C58F]">
               ABOUT
             </h2>
           </div>
           <div className="flex h-1/2 flex-row">
             <div
-              onMouseOver={handleDesignClick}
-              className="flex h-full w-1/2 flex-row border-2 border-black px-32 py-8"
+              onClick={handleDesignClick}
+              className="flex h-full w-1/2 cursor-pointer flex-row border-2 border-black px-32 py-8 hover:bg-[#31C58F]"
             >
               <div className="flex w-1/2 flex-col justify-between">
                 <h2 className="text-[32px] font-bold">DESIGNER</h2>
@@ -148,8 +159,8 @@ function About() {
               </div>
             </div>
             <div
-              onMouseOver={handleDeveloperClick}
-              className="flex h-full w-1/2 flex-row border-2 border-black px-32 py-8"
+              onClick={handleDeveloperClick}
+              className="flex h-full w-1/2 cursor-pointer flex-row border-2 border-black px-32 py-8 hover:bg-[#31C58F]"
             >
               <div className="flex w-1/2 flex-col justify-between">
                 <h2 className="text-[32px] font-bold">FULL-STACK DEVELOPER</h2>
@@ -203,12 +214,12 @@ function AboutTwo() {
 
 function Projects() {
   return (
-    <div className="flex h-full flex-row py-20">
-      <h2 className="w-1/2 pl-20 text-[55px] font-bold text-[#31C58F]">
+    <div className="flex h-full flex-row pt-20">
+      <h2 className="w-1/3 pl-20 text-[55px] font-bold text-[#31C58F]">
         PROJECTS
       </h2>
-      <div className="flex w-1/2 flex-row flex-wrap">
-        <div className="h-1/2 w-1/2 border-2 border-white p-4">
+      <div className="flex w-2/3 flex-row flex-wrap">
+        <div className="h-1/2 w-1/2 cursor-pointer border-2 border-white p-4 hover:bg-[#31C58F] ">
           <h2 className="text-[28px] text-white">FUSION92</h2>
           <img
             src="/nyl.jpg"
@@ -216,7 +227,7 @@ function Projects() {
             className="h-[calc(100%-40px)] w-full"
           />
         </div>
-        <div className="h-1/2 w-1/2 border-2 border-white p-4">
+        <div className="h-1/2 w-1/2 cursor-pointer border-2 border-white p-4 hover:bg-[#31C58F] ">
           <h2 className="text-[28px] text-white">MANAGE-IT</h2>
           <img
             src="/manage.jpg"
@@ -224,7 +235,7 @@ function Projects() {
             className="h-[calc(100%-40px)] w-full"
           />
         </div>
-        <div className="h-1/2 w-1/2 border-2 border-white p-4">
+        <div className="h-1/2 w-1/2 cursor-pointer border-2 border-white p-4 hover:bg-[#31C58F] ">
           <h2 className="text-[28px] text-white">REDDIT-CLONE</h2>
           <img
             src="/social.jpg"
@@ -232,7 +243,7 @@ function Projects() {
             className="h-[calc(100%-40px)] w-full"
           />
         </div>
-        <div className="h-1/2 w-1/2 border-2 border-white p-4">
+        <div className="h-1/2 w-1/2 cursor-pointer border-2 border-white p-4 hover:bg-[#31C58F]">
           <h2 className="text-[28px] text-white">RAILS CRM</h2>
           <img
             src="crm.jpg"
