@@ -87,6 +87,7 @@ function About() {
                 animate={{ scale: 1, x: 0, opacity: 1 }}
                 transition={{ ease: "easeOut", duration: 0.5 }}
                 className="h-4/5 w-4/5 bg-[url('/misty.png')] bg-cover bg-center bg-no-repeat"
+                key={d.title}
               >
                 <div className="flex flex-row justify-end">
                   <button
@@ -111,6 +112,7 @@ function About() {
                 animate={{ scale: 1, x: 0, opacity: 1 }}
                 transition={{ ease: "easeOut", duration: 0.5 }}
                 className="h-4/5 w-4/5 bg-white"
+                key={d.title}
               >
                 <div className="flex h-full w-full flex-row">
                   <div className="flex w-1/5 flex-col gap-4 py-4 pl-2">
