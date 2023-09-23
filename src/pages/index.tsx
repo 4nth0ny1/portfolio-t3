@@ -288,17 +288,18 @@ function Contact() {
   return (
     <div className="flex h-full flex-row gap-20 py-20">
       <h2 className="pl-20 text-[55px] font-bold text-[#31C58F]">CONTACT</h2>
-      <div className="flex flex-col gap-10 text-white">
-        <Link href="mailto:acatullo4@gmail.com">
-          <HiOutlineMail className="text-3xl" />
-        </Link>
 
-        <Link href="https://github.com/4nth0ny1">
-          <FiGithub className="text-3xl" />
-        </Link>
-      </div>
-      <div>
+      <div className="relative">
         <img src="/contactimg.png" alt="contactimg.png" />
+        <div className="absolute bottom-1/2 flex w-full justify-center gap-20 text-[#31c58f]">
+          <Link href="mailto:acatullo4@gmail.com">
+            <HiOutlineMail className="text-5xl" />
+          </Link>
+
+          <Link href="https://github.com/4nth0ny1">
+            <FiGithub className="text-5xl" />
+          </Link>
+        </div>
       </div>
     </div>
   );
