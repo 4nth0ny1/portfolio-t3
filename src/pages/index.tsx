@@ -158,7 +158,12 @@ function About() {
                 </ul>
               </div>
               <div className="flex w-1/2 flex-col justify-center">
-                <img src="/designimg.png" alt="designimg.png" className="" />
+                <motion.img
+                  whileHover={{ scale: 1.2 }}
+                  src="/designimg.png"
+                  alt="designimg.png"
+                  transition={{ type: "spring", ease: "easeOut", duration: 1 }}
+                />
               </div>
             </div>
             <div
@@ -175,10 +180,11 @@ function About() {
                 </ul>
               </div>
               <div className="flex w-1/2 flex-col justify-center">
-                <img
+                <motion.img
                   src="/fullstackimg.png"
                   alt="fullstackimg.png"
-                  className=""
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: "spring", ease: "easeOut", duration: 1 }}
                 />
               </div>
             </div>
