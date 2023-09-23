@@ -81,7 +81,7 @@ function About() {
       {open ? (
         <div className="flex h-full flex-row items-center justify-center">
           {designData &&
-            designData.map((d) => (
+            designData.map((d: any) => (
               <motion.div
                 initial={{ scale: 0.5, x: -1000, opacity: 0 }}
                 animate={{ scale: 1, x: 0, opacity: 1 }}
@@ -105,7 +105,7 @@ function About() {
               </motion.div>
             ))}
           {developerData &&
-            developerData.map((d) => (
+            developerData.map((d: any) => (
               <motion.div
                 initial={{ scale: 0.5, x: 1000, opacity: 0 }}
                 animate={{ scale: 1, x: 0, opacity: 1 }}
