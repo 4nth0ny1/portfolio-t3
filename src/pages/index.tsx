@@ -291,7 +291,12 @@ function Contact() {
 
       <div className="relative">
         <img src="/contactimg.png" alt="contactimg.png" />
-        <div className="absolute bottom-1/2 flex w-full justify-center gap-20 text-[#31c58f]">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ type: "spring", ease: "easeOut", duration: 2 }}
+          className="absolute bottom-1/2 flex w-full justify-center gap-20 text-[#31c58f]"
+        >
           <Link href="mailto:acatullo4@gmail.com">
             <HiOutlineMail className="text-5xl" />
           </Link>
@@ -299,7 +304,7 @@ function Contact() {
           <Link href="https://github.com/4nth0ny1">
             <FiGithub className="text-5xl" />
           </Link>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
