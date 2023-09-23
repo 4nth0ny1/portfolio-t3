@@ -292,9 +292,9 @@ function Contact() {
       <div className="relative">
         <img src="/contactimg.png" alt="contactimg.png" />
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ type: "spring", ease: "easeOut", duration: 4 }}
+          initial={{ scale: 0.75, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ type: "spring", ease: "easeOut", duration: 3 }}
           className="absolute bottom-1/2 flex w-full justify-center gap-20"
         >
           <Link href="mailto:acatullo4@gmail.com">
