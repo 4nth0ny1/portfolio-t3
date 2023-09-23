@@ -131,7 +131,7 @@ function About() {
           </div>
           <div className="flex h-1/2 flex-row">
             <div
-              onClick={handleDesignClick}
+              onMouseOver={handleDesignClick}
               className="flex h-full w-1/2 flex-row border-2 border-black px-32 py-8"
             >
               <div className="flex w-1/2 flex-col justify-between">
@@ -148,7 +148,7 @@ function About() {
               </div>
             </div>
             <div
-              onClick={handleDeveloperClick}
+              onMouseOver={handleDeveloperClick}
               className="flex h-full w-1/2 flex-row border-2 border-black px-32 py-8"
             >
               <div className="flex w-1/2 flex-col justify-between">
