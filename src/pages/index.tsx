@@ -257,53 +257,72 @@ function Projects() {
           initial={{ scale: 0.95, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ type: "spring", ease: "easeOut", duration: 2 }}
-          className="h-1/2 w-1/2 cursor-pointer border-2 border-white p-4 hover:bg-[#31C58F] "
+          className="h-1/2 w-1/2 border-2 border-white p-4 hover:bg-[#31C58F] "
         >
-          <h2 className="text-[28px] text-white">FUSION92</h2>
-          <img
-            src="/nyl.jpg"
-            alt="nyl.jpg"
-            className="h-[calc(100%-40px)] w-full"
-          />
+          <Link href="/fusion92">
+            <h2 className="cursor-pointer text-[28px] text-white hover:font-bold hover:text-black">
+              FUSION92
+            </h2>
+            <img
+              src="/nyl.jpg"
+              alt="nyl.jpg"
+              className="h-[calc(100%-40px)] w-full"
+            />
+          </Link>
         </motion.div>
+
         <motion.div
           initial={{ scale: 0.75, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ type: "spring", ease: "easeOut", duration: 3 }}
-          className="h-1/2 w-1/2 cursor-pointer border-2 border-white p-4 hover:bg-[#31C58F] "
+          className="h-1/2 w-1/2 border-2 border-white p-4 hover:bg-[#31C58F] "
         >
-          <h2 className="text-[28px] text-white">MANAGE-IT</h2>
-          <img
-            src="/manage.jpg"
-            alt="manage.jpg"
-            className="h-[calc(100%-40px)] w-full"
-          />
+          <Link href="/manageit">
+            <h2 className="cursor-pointer text-[28px] text-white hover:font-bold hover:text-black">
+              MANAGE-IT
+            </h2>
+
+            <img
+              src="/manage.jpg"
+              alt="manage.jpg"
+              className="h-[calc(100%-40px)] w-full"
+            />
+          </Link>
         </motion.div>
         <motion.div
           initial={{ scale: 0.5, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ type: "spring", ease: "easeOut", duration: 4 }}
-          className="h-1/2 w-1/2 cursor-pointer border-2 border-white p-4 hover:bg-[#31C58F] "
+          className="h-1/2 w-1/2 border-2 border-white p-4 hover:bg-[#31C58F] "
         >
-          <h2 className="text-[28px] text-white">REDDIT-CLONE</h2>
-          <img
-            src="/social.jpg"
-            alt="social.jpg"
-            className="h-[calc(100%-40px)] w-full"
-          />
+          <Link href="/reddit">
+            <h2 className="cursor-pointer text-[28px] text-white hover:font-bold hover:text-black">
+              REDDIT-CLONE
+            </h2>
+
+            <img
+              src="/social.jpg"
+              alt="social.jpg"
+              className="h-[calc(100%-40px)] w-full"
+            />
+          </Link>
         </motion.div>
         <motion.div
           initial={{ scale: 0.25, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ type: "spring", ease: "easeOut", duration: 5 }}
-          className="h-1/2 w-1/2 cursor-pointer border-2 border-white p-4 hover:bg-[#31C58F]"
+          className="h-1/2 w-1/2 border-2 border-white p-4 hover:bg-[#31C58F]"
         >
-          <h2 className="text-[28px] text-white">RAILS CRM</h2>
-          <img
-            src="crm.jpg"
-            alt="crm.jpg"
-            className="h-[calc(100%-40px)] w-full"
-          />
+          <Link href="/rails">
+            <h2 className="cursor-pointer text-[28px] text-white hover:font-bold hover:text-black">
+              RAILS CRM
+            </h2>
+            <img
+              src="crm.jpg"
+              alt="crm.jpg"
+              className="h-[calc(100%-40px)] w-full"
+            />
+          </Link>
         </motion.div>
       </div>
     </div>
